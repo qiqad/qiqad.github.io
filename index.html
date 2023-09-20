@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qiqad</title>
+
+    <style>
+        body {
+            background-color: black;
+        }
+        
+        .flex {
+            justify-content: center;
+        }
+        
+        .flex h1 {
+            display: flex;
+            justify-content: center;
+            color: #fff;
+            font-family: "Museo Sans", Avenir, "Helvetica Neue";
+        }
+        
+        #demo {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="flex" class="flex">
+        <h1>Qiqad</h1>
+    </div>
+    <div>
+        <p id="demo"></p>
+    </div>
+
+    <script>
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+
+        const element = document.getElementById("flex");
+        var ow = element.offsetWidth;
+        var oh = element.offsetHeight;
+
+        let text =
+            "Height: " +
+            h +
+            " or " +
+            oh +
+            "px<br>" +
+            "Width: " +
+            w +
+            " or " +
+            ow +
+            "px";
+        document.getElementById("demo").innerHTML = text;
+
+        document.getElementById("flex").style.width = w + "px";
+        document.getElementById("flex").style.height = h + "px";
+        document.getElementById("flex").style.marginTop = h / 2 - oh + "px";
+    </script>
+</body>
+
+</html>
